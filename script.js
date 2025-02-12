@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     addFilterOptions();
 
     displayDates();
+	console.log("aaa");
 });
 
 function handleSubmitButtonClick(event) {

@@ -151,7 +151,7 @@ const addFilterOptions = () => {
     let allLocations = []
     let locations = []
 	if(events == null){
-		retrun null;
+		retrun false;
 	}
     events.forEach(element => {
         allLocations.push(element.location);

@@ -237,6 +237,8 @@ const resetDatePicker = () => {
     between.forEach(element => {
         element && element.classList.remove("between");
     });
+	
+    yearInput.value=year;
 }
 
 nextBtn.addEventListener("click", () => {

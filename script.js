@@ -150,6 +150,9 @@ const handleXIconClick = async (event) => {
 const addFilterOptions = () => {
     let allLocations = []
     let locations = []
+	if(event.lenght == 0){
+		retrun;
+	}
     events.forEach(element => {
         allLocations.push(element.location);
     })

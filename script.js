@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', async function () {
         events = parsedEvents
 	} else {
 		console.log("No events found in localStorage");
+		events = []
 	}
 
 	fetch('https://raw.githubusercontent.com/samayo/country-json/refs/heads/master/src/country-by-capital-city.json')
@@ -59,7 +60,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     addFilterOptions();
 
     displayDates();
-	console.log("aaa");
+
 });
 
 function handleSubmitButtonClick(event) {
@@ -150,7 +151,7 @@ const handleXIconClick = async (event) => {
 const addFilterOptions = () => {
     let allLocations = []
     let locations = []
-	if(events == null){
+	if(events.lenght == 0){
 		return false;
 	}
     events.forEach(element => {

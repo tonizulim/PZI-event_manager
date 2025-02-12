@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Final project</title>
+		<link rel="stylesheet" type="text/css" href="./styles.css" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+
+		<template id="event-template">
+			<article class="event" event-id="">
+				<div class="event-header-icon-container">
+					<i class="fa fa-times x-icon"></i>
+				</div>
+				<div class="event-main-content-container">
+					<h3>
+						<span class="event-title-label"></span>
+					</h3>
+
+					<div class="paragraph-container"></div>
+				</div>
+			</article>
+		</template>
+
+
+    </head>
+	<body>
+		<header>
+			<h2>EVENT MANAGER</h2>
+		</header>
+		<main>
+
+            <div id="add-new-event">
+                <form id="event-form">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" required><br>
+
+                    <label for="image">Main image (URL)</label>
+                    <input type="url" id="image" name="image" required><br>
+
+                    <label for="description">Description</label>
+                    <input id="description" name="description"  required></input><br>
+
+                    <label for="location">Location</label>
+                    <select id="location" name="location" required>
+                        <option value="" disabled selected></option>
+                    </select><br>
+
+                    <label for="start-date">Start/end Date</label>
+                    <input id="start-date" name="date"  required readonly></input><br>
+                    <input id="end-date" readonly></input><br>
+
+                  
+                    <div id="datepicker" >
+                        <div id="datepicker-header">
+
+                            <button type="button" id="prev-month">&lt;</button>
+                            <button type="button" id="next-month">></button>
+                               
+                            <select id="month-input">
+                                <option value=0>January</option>
+                                <option value=1>February</option>
+                                <option value=2>March</option>
+                                <option value=3>April</option>
+                                <option value=4>May</option>
+                                <option value=5>June</option>
+                                <option value=6>July</option>
+                                <option value=7>August</option>
+                                <option value=8>September</option>
+                                <option value=9>October</option>                                    
+                                <option value=10>November</option>
+                                <option value=11>December</option>
+                            </select>
+
+                            <input type="number" id="year-input" />
+                            
+                        </div>
+                  
+                        <div id="days">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+                  
+                        <div id="dates">
+                        </div>
+
+                    </div>
+            
+                    <button type="submit" id="submit-btn">Add new event</button>
+                </form>
+            </div>
+
+			<div id="events-container">
+                <div id="events-container-header">
+                    <h1>Current Events</h1>
+                    <div id="filter-container">
+                        <label for="filter-location">Filter current events:</label>
+                        <select id="filter-location" name="filter-location">
+                        </select><br>
+                    </div>
+                </div>
+	
+				<div id="show-event-container"></div>
+            </div>
+
+		</main>
+    </body>
+    <script src="script.js"></script>
+</html>

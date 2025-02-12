@@ -1,0 +1,261 @@
+body{
+    background-color: #d1ffff;
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    margin-top: 0;
+    margin-bottom: 2vh;
+    background-color: #5a9ea0;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    font-size: 25px;
+    color: white;
+}
+
+#event-form{
+    padding: 15px;
+    border: 2px #9ccbcd solid;
+    border-radius: 10px;
+    background-color: #e0f7fa;
+    display: flex;
+    flex-direction: column;
+    max-width: 40vw;
+    min-width: 300px;
+    margin: auto;
+    margin-top: 30px;
+    color: #67a7a9;
+}
+
+input{
+    color: #67a7a9;
+    border: 2px solid #5a9ea0;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+}
+
+select {
+    color: #67a7a9;
+    border: 2px solid #5a9ea0;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+    width: 100%;
+}
+
+#submit-btn{
+    width: 100%;
+    text-align: center;
+    background:  #5a9ea0;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+#submit-btn:hover{
+    cursor: pointer;
+    background-color:  #4b8486;
+}
+
+#datepicker {
+    border: 2px solid #5a9ea0;
+    background: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#datepicker-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+#datepicker-header input{
+    width: 100px;
+}
+
+#datepicker-header select{
+    width: 200px;
+}
+
+#datepicker-header button{
+    background:  #5a9ea0;
+    border: none;
+    color: white;
+    border-radius: 20px;
+    width: 40px;
+    font-size: 18px;
+    margin: 15px 0;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+#datepicker-header button:hover{
+    cursor: pointer;
+    background-color: #4b8486;
+}
+
+#dates button {
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition: 0.3s;
+    width: 75px;
+    background-color: #bbe6eda9;
+    color: rgb(97, 111, 124);
+    aspect-ratio: 1;
+}
+
+#days,
+#dates {
+  display: grid;
+  grid-template-columns: repeat(7,75px);
+  gap: 10px;
+  margin-block: 10px;
+}
+
+#days span {
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+  
+#dates button:disabled {
+    background-color: #ddffff;
+    pointer-events: none;
+    user-select: none;
+}
+  
+#dates button:hover {
+    background-color: #75c0c4;
+}
+  
+#dates button.today {
+    background:  #ddd5b0;
+    color: white;
+}
+  
+#dates button.selected {
+    background:  #5a9ea0;
+    color: white;
+}
+
+#dates button.between {
+    background:  #5a9ea0;
+    color: #fff;
+}
+
+
+#events-container{
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+#events-container-header{
+    background-color: #5a9ea0;
+    font-size: 20px;
+    color: white;
+    max-width: 40vw;
+    min-width: 300px;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+#filter-container{
+    border-radius: 10px;
+    background-color: #fff;
+    color: #67a7a9;
+    padding: 15px;
+}
+
+#filterLocation{
+    width: 40%;
+}
+
+#show-event-container{
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 20px 20px;
+}
+
+/* !!!! napravi da lipo izgledaju kartice */
+.event{
+    text-align: justify;
+	padding: 1rem;
+	background-color: rgb(238, 238, 238);
+	position: relative;
+    border: 2px solid black;
+    border: none;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+    min-width: 300px;
+    color: #5a9ea0;
+    font-weight: 1000;
+    font-size: large;
+}
+
+.event .event-header-icon-container{
+    display: flex;
+    justify-content: right;
+}
+
+.event .event-header-icon-container i{
+    font-size: 30px;
+    color: #5a9ea0;
+}
+
+.event .event-header-icon-container i:hover{
+    cursor: pointer;
+    color: #497f81;
+    transition: 0.3s;
+}
+
+.event img{
+    max-width: 300px;
+}
+
+@media screen and (max-width: 900px) {
+	#show-event-container {
+		grid-template-columns: 1fr 1fr;
+	}
+    #days,
+    #dates {
+        grid-template-columns: repeat(7,32px);
+    }
+    #dates button {
+        width: 32px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+	#show-event-container {
+		grid-template-columns: 1fr;
+	}
+
+    #days,
+    #dates {
+        grid-template-columns: repeat(7,32px);
+    }
+
+    #dates button {
+        width: 32px;
+    }
+}
+

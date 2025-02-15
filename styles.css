@@ -1,45 +1,45 @@
 body{
-    background-color: #d1ffff;
     padding: 0;
     margin: 0;
+    background-color: white;
 }
 
 header{
     margin-top: 0;
     margin-bottom: 2vh;
-    background-color: #5a9ea0;
     display: flex;
     justify-content: center; 
     align-items: center;
     font-size: 25px;
     color: white;
+    background-color: #0f172a;
 }
 
 #event-form{
     padding: 15px;
-    border: 2px #9ccbcd solid;
+    border: 2px black solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
     border-radius: 10px;
-    background-color: #e0f7fa;
     display: flex;
     flex-direction: column;
     max-width: 40vw;
     min-width: 300px;
     margin: auto;
     margin-top: 30px;
-    color: #67a7a9;
+    color: #374151;
 }
 
 input{
-    color: #67a7a9;
-    border: 2px solid #5a9ea0;
+    color: #374151;
+    border: 2px solid #d1d5db;
     border-radius: 10px;
     font-size: 18px;
     padding: 5px;
 }
 
 select {
-    color: #67a7a9;
-    border: 2px solid #5a9ea0;
+    color: #374151;
+    border: 2px solid #d1d5db;
     border-radius: 10px;
     font-size: 18px;
     padding: 5px;
@@ -49,7 +49,7 @@ select {
 #submit-btn{
     width: 100%;
     text-align: center;
-    background:  #5a9ea0;
+    background:  #0f172a;
     border: none;
     color: white;
     border-radius: 20px;
@@ -61,12 +61,12 @@ select {
 
 #submit-btn:hover{
     cursor: pointer;
-    background-color:  #4b8486;
+    background:  #0f172ade;
 }
 
 #datepicker {
-    border: 2px solid #5a9ea0;
-    background: #fff;
+    border: 2px black solid;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
     padding: 10px;
     border-radius: 10px;
 }
@@ -88,7 +88,7 @@ select {
 }
 
 #datepicker-header button{
-    background:  #5a9ea0;
+    background:  #0f172a;
     border: none;
     color: white;
     border-radius: 20px;
@@ -101,7 +101,7 @@ select {
 
 #datepicker-header button:hover{
     cursor: pointer;
-    background-color: #4b8486;
+    background:  #0f172ade;
 }
 
 #dates button {
@@ -110,9 +110,9 @@ select {
     border-radius: 3px;
     transition: 0.3s;
     width: 75px;
-    background-color: #bbe6eda9;
-    color: rgb(97, 111, 124);
+    color: black;
     aspect-ratio: 1;
+    background-color: #ceced4;
 }
 
 #days,
@@ -131,27 +131,28 @@ select {
 }
   
 #dates button:disabled {
-    background-color: #ddffff;
     pointer-events: none;
     user-select: none;
+    background-color: #ceced462;
+
 }
   
 #dates button:hover {
-    background-color: #75c0c4;
+    background:  #0f172ade;
 }
   
 #dates button.today {
-    background:  #ddd5b0;
+    background:  #e37f67;
     color: white;
 }
   
 #dates button.selected {
-    background:  #5a9ea0;
+    background:  #0f172a;
     color: white;
 }
 
 #dates button.between {
-    background:  #5a9ea0;
+    background:  #0f1931de;
     color: #fff;
 }
 
@@ -163,7 +164,7 @@ select {
 }
 
 #events-container-header{
-    background-color: #5a9ea0;
+    background:  #0f172a;
     font-size: 20px;
     color: white;
     max-width: 40vw;
@@ -176,7 +177,7 @@ select {
 #filter-container{
     border-radius: 10px;
     background-color: #fff;
-    color: #67a7a9;
+    color: #020817;
     padding: 15px;
 }
 
@@ -192,21 +193,19 @@ select {
     gap: 20px 20px;
 }
 
-/* !!!! napravi da lipo izgledaju kartice */
 .event{
     text-align: justify;
 	padding: 1rem;
-	background-color: rgb(238, 238, 238);
 	position: relative;
     border: 2px solid black;
     border: none;
 	border-radius: 10px;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px;
+	box-shadow: rgb(0, 0, 0) 2px 2px 5px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
     min-width: 300px;
-    color: #5a9ea0;
+    color: #2a2f3c;
     font-weight: 1000;
     font-size: large;
 }
@@ -218,12 +217,12 @@ select {
 
 .event .event-header-icon-container i{
     font-size: 30px;
-    color: #5a9ea0;
+    color:  #0f172a;
 }
 
 .event .event-header-icon-container i:hover{
     cursor: pointer;
-    color: #497f81;
+    color:  #0f172ade;
     transition: 0.3s;
 }
 
